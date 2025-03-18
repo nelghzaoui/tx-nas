@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { socials } from '../config/social-media.config';
 
 @Component({
   selector: 'nas-header',
-  imports: [CommonModule],
   template: `
     <nav class="flex flex-col items-center gap-4">
       <span class="text-2xl">adamkeyes</span>
