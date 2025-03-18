@@ -18,26 +18,38 @@ import { ContactComponent } from './components/contact.component';
     ContactComponent
   ],
   template: `
-    <header class="pt-6">
+    <header class="p-6">
       <nas-header />
     </header>
 
-    <main class="pb-20">
+    <main class="p-6 pb-20">
       <nas-intro />
 
-      <div class="h-px border border-white mt-20 mx-6 mb-10"></div>
+      <div
+        class="h-px border border-white mt-20 mb-12
+               md:w-[calc(100%-2rem)] md:mt-[27px] md:mx-auto md:mb-[1px]
+               lg:max-w-[1050px] lg:mt-[6px] lg:mx-auto lg:mb-[8px]"
+      ></div>
       <nas-skills />
-      <div class="h-px border border-white mt-20 mx-6 mb-10"></div>
+      <div
+        class="h-px border border-white mt-20 mb-10 md:hidden lg:hidden"
+      ></div>
       <nas-projects />
       <router-outlet />
     </main>
 
-    <footer class="bg-[#242424] pb-10">
+    <footer class="bg-[#242424] pb-8">
       <nas-contact />
-      <div class="h-px border border-white mt-20 mx-6 mb-10"></div>
+      <div
+        class="h-px border border-white mt-20 mx-6 mb-10
+               md:w-[calc(100%-2rem)] md:mt-[27px] md:mx-auto md:mb-[1px]
+               lg:max-w-[1050px] lg:mt-[6px] lg:mx-auto lg:mb-[8px]"
+      ></div>
       <nas-header />
     </footer>
   `,
-  styles: ``
+  styles: `
+
+  `
 })
 export class AppComponent {}

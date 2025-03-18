@@ -13,12 +13,14 @@ import {
   imports: [ReactiveFormsModule, NgClass],
   template: `
     <form
-      class="flex flex-col text-center text-white p-4 pt-[3.75rem] gap-[3.125rem] bg-[url('/assets/images/pattern-rings.svg')] bg-no-repeat bg-[position:left_-347px_bottom_14px]"
+      class="flex flex-col text-center text-white p-4 pt-[3.75rem] gap-[3.125rem] bg-[url('/assets/images/pattern-rings.svg')] bg-no-repeat bg-[position:left_-347px_bottom_14px]              md:text-left md:items-start md:justify-start 
+             md:pt-[3.8rem] md:pr-[2rem] md:pb-[2rem] md:pl-[2rem] md:overflow-hidden
+             lg:max-w-[1062px] lg:mx-auto lg:pt-[6rem] lg:pr-[3rem] lg:pb-[2rem] lg:pl-[3rem]"
       id="contact-form"
       [formGroup]="contactForm"
       (ngSubmit)="onSubmit(contactForm)"
     >
-      <div class="grid gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <h6
           class="text-[2.5rem] leading-[2.5rem] tracking-[-1.14px] font-semibold"
         >
@@ -64,20 +66,19 @@ import {
             formControlName="email"
             appEmailValidator
           />
-          <ng-container *ngIf="email.touched && email.hasError('required')">
-            <span class="contact-form__error-msg"
-              >Your email address is required</span
-            >
-            <span class="contact-form__error-icon">
-              <img src="error-icon.png" alt="" />
-            </span>
-          </ng-container>
 
-          @if(email.touched && !email.hasError('required') &&
+          @if(email.touched && email.hasError('required')) {
+          <span class="contact-form__error-msg">
+            Your email address is required
+          </span>
+          <span class="contact-form__error-icon">
+            <img src="error-icon.png" alt="" />
+          </span>
+          } @if(email.touched && !email.hasError('required') &&
           email.hasError('invalidEmailPattern')) {
-          <span class="contact-form__error-msg"
-            >Sorry, invalid format here</span
-          >
+          <span class="contact-form__error-msg">
+            Sorry, invalid format here
+          </span>
           <span class="contact-form__error-icon">
             <img src="error-icon.png" alt="" />
           </span>
@@ -107,12 +108,14 @@ import {
           </span>
           }
         </div>
-        <button
-          type="submit"
-          class="text-base font-medium tracking-[2.29px] leading-[1.625rem] uppercase border-b-2 border-b-[#4EE1A0] w-fit m-auto pb-2.5 no-underline bg-transparent text-white transition-colors duration-200 ease cursor-pointer hover:text-[#4EE1A0] border-0 m-0 self-end justify-self-end"
-        >
-          Send Message
-        </button>
+        <div class="flex justify-self-end">
+          <button
+            type="submit"
+            class="text-base font-medium tracking-[2px] leading-6 uppercase border-b-2 border-b-[#4EE1A0] w-fit m-auto pb-2.5 no-underline bg-transparent text-white transition-colors duration-200 ease cursor-pointer hover:text-[#4EE1A0] border-0"
+          >
+            Send Message
+          </button>
+        </div>
       </div>
     </form>
   `
