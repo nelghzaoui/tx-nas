@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from './button.component';
 
 @Component({
   selector: 'nas-intro',
+  imports: [ButtonComponent],
   template: `
     <section class="flex flex-col items-center text-center color-white p-4">
       <div class="relative">
@@ -48,14 +50,10 @@ import { Component } from '@angular/core';
           Based in the UK, I’m a front-end developer passionate about building
           accessible web apps that users love.
         </p>
-        <!-- <app-button-with-border-bottom
-          class="btn"
-          buttonText="Contact me"
-          targetComponent="contact-form"
-        ></app-button-with-border-bottom> -->
+
+        <nas-button label="Contact me" anchor="contact" />
       </div>
     </section>
-  `,
-  styles: ``
+  `
 })
 export class IntroComponent {}

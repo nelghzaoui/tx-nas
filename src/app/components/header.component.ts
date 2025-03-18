@@ -21,8 +21,7 @@ import { socials } from '../config/social-media.config';
         }
       </ul>
     </nav>
-  `,
-  styles: ``
+  `
 })
 export class HeaderComponent {
   readonly socials = socials;
