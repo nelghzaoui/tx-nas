@@ -38,7 +38,7 @@ import { ContactComponent } from './components/contact.component';
       <router-outlet />
     </main>
 
-    <footer class="bg-[#242424] pb-8">
+    <footer class="bg-[#242424] pb-8 lg:pb-[6rem] ">
       <nas-contact />
       <div
         class="h-px border border-white mt-20 mx-6 mb-10

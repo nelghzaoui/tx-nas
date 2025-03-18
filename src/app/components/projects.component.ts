@@ -10,7 +10,7 @@ import { NgClass } from '@angular/common';
     <section
       class="flex flex-col text-white gap-10
             md:gap-[3.75rem] md:pt-[4.5rem] md:pr-[1.5rem] md:pb-[2rem] md:pl-[1.5rem]
-            lg:pt-[8rem] lg:pr-[3rem] lg:pb-[6.25rem] lg:pl-[3rem] lg:max-w-[1062px] lg:mx-auto"
+            lg:pt-[8rem] lg:pb-[6.25rem] lg:max-w-[1062px] lg:mx-auto"
     >
       <div class="flex items-center justify-between">
         <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">

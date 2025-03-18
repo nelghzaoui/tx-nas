@@ -8,7 +8,7 @@ import { ButtonComponent } from './button.component';
     <section
       class="flex flex-col items-center text-center color-white
              md:text-left md:items-start md:justify-start md:pt-11 md:pb-[2rem] md:overflow-hidden
-             lg:max-w-[1062px] lg:mx-auto lg:pt-[5rem] lg:pb-[15rem] lg:px-0"
+             lg:max-w-[1062px] lg:mx-auto lg:pt-[5rem] lg:pb-[9rem] lg:px-0"
     >
       <div
         class="relative md:static lg:max-w-[445px] lg:top-0 lg:right-[50px] min-[1070px]:left-[53.1%] min-[1070px]:right-auto min-[1450px]:left-[60.5%]"

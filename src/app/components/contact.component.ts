@@ -13,26 +13,32 @@ import {
   imports: [ReactiveFormsModule, NgClass],
   template: `
     <form
-      class="flex flex-col text-center p-4 pt-[3.75rem] bg-[url('/assets/images/pattern-rings.svg')] bg-no-repeat bg-[position:left_-347px_bottom_14px]
-             md:py-[5rem] lg:max-w-[1062px] lg:mx-auto lg:pt-[6rem] lg:pr-[3rem] lg:pb-[2rem] lg:pl-[3rem]"
+      class="flex flex-col text-center p-4 pt-[3.75rem] md:py-[5rem] lg:pt-[6rem] lg:pb-[5rem] "
       id="contact-form"
       [formGroup]="contactForm"
       (ngSubmit)="onSubmit(contactForm)"
     >
-      <div class="flex flex-col gap-[3rem] md:mx-auto md:w-2/3">
-        <div class="flex flex-col gap-5 md:gap-12 text-center self-center">
+      <div
+        class="flex flex-col gap-[3rem] md:mx-auto md:w-2/3 
+               lg:flex-row lg:max-w-[1062px] lg:w-full lg:mx-auto lg:justify-between lg:gap-[15rem]"
+      >
+        <div
+          class="flex flex-col gap-5 text-center md:gap-12 lg:text-start lg:basis-1/2"
+        >
           <h6
             class="text-[2.5rem] leading-[2.5rem] tracking-[-1.14px] font-semibold
                  md:text-[5rem]"
           >
             Contact
           </h6>
-          <p class="text-[#D9D9D9] text-base leading-[1.625rem] md:text-xl">
+          <p
+            class="text-[#D9D9D9] text-base leading-[1.625rem] md:text-xl lg:text-base"
+          >
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
         </div>
-        <div class="grid gap-8">
+        <div class="grid gap-8 lg:basis-1/2">
           <div class="relative">
             <input
               class="bg-transparent text-white border-0 border-b border-b-white p-[0.8rem] pl-[1.5rem] text-base leading-[26px] min-w-full cursor-pointer focus:outline-none focus:border-[#4EE1A0]"
