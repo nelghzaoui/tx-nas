@@ -50,15 +50,16 @@ import { ButtonComponent } from './button.component';
          md:text-[5.2rem] md:tracking-[-2.05px] md:leading-[5rem]
          lg:text-[5.5rem] lg:leading-[5.5rem] lg:max-w-[14ch]"
         >
-          <span>Nice to</span> meet you! I'm
+          Nice to meet you! I'm
           <span
-            class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block"
+            class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
+                   md:pt-6"
           >
             Adam Keyes.
           </span>
         </h1>
         <p
-          class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-[1.125rem] md:leading-[1.75rem] lg:w-[40ch]"
+          class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]"
         >
           Based in the UK, I’m a front-end developer passionate about building
           accessible web apps that users love.

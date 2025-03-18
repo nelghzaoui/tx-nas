@@ -45,11 +45,11 @@ import { ContactComponent } from './components/contact.component';
                md:w-[calc(100%-2rem)] md:mt-[27px] md:mx-auto md:mb-[1px]
                lg:max-w-[1050px] lg:mt-[6px] lg:mx-auto lg:mb-[8px]"
       ></div>
-      <nas-header />
-    </footer>
-  `,
-  styles: `
 
+      <div class="md:px-8 md:pt-8">
+        <nas-header />
+      </div>
+    </footer>
   `
 })
 export class AppComponent {}

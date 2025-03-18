@@ -34,7 +34,7 @@ body {
 @media screen and (min-width: 768px) {
   body {
     background-position: -270px 86px, right -65px top 550px,
-      right -360px top 1047px;
+      right -330px top 1047px;
     background-size: 530px 129px, 0 0, 530px 129px;
   }
 }
