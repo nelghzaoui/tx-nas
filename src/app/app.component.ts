@@ -5,17 +5,19 @@ import { IntroComponent } from './components/intro.component';
 import { SkillsComponent } from './components/skills.component';
 import { ProjectsComponent } from './components/projects.component';
 import { ContactComponent } from './components/contact.component';
+import { OffersComponent } from './components/offers.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    HeaderComponent,
+    ContactComponent,
     IntroComponent,
-    SkillsComponent,
+    HeaderComponent,
+    OffersComponent,
     ProjectsComponent,
-    ContactComponent
+    SkillsComponent
   ],
   template: `
     <header class="p-6">
@@ -24,6 +26,8 @@ import { ContactComponent } from './components/contact.component';
 
     <main class="p-6 pb-20">
       <nas-intro />
+
+      <nas-offers />
 
       <div
         class="h-px border border-white mt-20 mb-12
@@ -35,6 +39,8 @@ import { ContactComponent } from './components/contact.component';
         class="h-px border border-white mt-20 mb-10 md:hidden lg:hidden"
       ></div>
       <nas-projects />
+
+      <!-- Not needed for the moment -->
       <router-outlet />
     </main>
 

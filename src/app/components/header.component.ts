@@ -9,7 +9,7 @@ import { socials } from '../config/social-media.config';
              md:flex-row md:justify-between
              lg:max-w-[1062px] lg:mx-auto"
     >
-      <span class="text-2xl md:text-[2rem] md:font-semibold">adamkeyes</span>
+      <span class="text-2xl md:text-[2rem] md:font-semibold">txnas</span>
       <ul class="flex gap-6 md:gap-8">
         @for(social of socials; track social) {
         <li>
