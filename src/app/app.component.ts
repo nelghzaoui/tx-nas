@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header.component';
-import { IntroComponent } from './components/intro.component';
-import { SkillsComponent } from './components/skills.component';
-import { ProjectsComponent } from './components/projects.component';
-import { ContactComponent } from './components/contact.component';
-import { OffersComponent } from './components/offers.component';
+import { CustomCursorComponent } from './components/cursor.component';
+import { HeaderComponent } from './layouts/header.component';
+import { IntroComponent } from './layouts/intro.component';
+import { ProjectsComponent } from './layouts/projects.component';
+import { ContactComponent } from './layouts/contact.component';
+import { OffersComponent } from './layouts/offers.component';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +17,11 @@ import { OffersComponent } from './components/offers.component';
     HeaderComponent,
     OffersComponent,
     ProjectsComponent,
-    SkillsComponent
+    CustomCursorComponent
   ],
   template: `
+    <nas-cursor />
+
     <header class="p-6">
       <nas-header />
     </header>
@@ -29,15 +31,6 @@ import { OffersComponent } from './components/offers.component';
 
       <nas-offers />
 
-      <div
-        class="h-px border border-white mt-20 mb-12
-               md:w-[calc(100%-2rem)] md:mt-[27px] md:mx-auto md:mb-[1px]
-               lg:max-w-[1050px] lg:mt-[6px] lg:mx-auto lg:mb-[8px]"
-      ></div>
-      <nas-skills />
-      <div
-        class="h-px border border-white mt-20 mb-10 md:hidden lg:hidden"
-      ></div>
       <nas-projects />
 
       <!-- Not needed for the moment -->

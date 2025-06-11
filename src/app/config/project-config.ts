@@ -49,7 +49,7 @@ export const projects: Project[] = [
   }
 ];
 
-interface Project {
+type Project = {
   name: string;
   images: {
     small: string;
@@ -58,4 +58,4 @@ interface Project {
   techs: string[];
   website?: string;
   repo?: string;
-}
+};

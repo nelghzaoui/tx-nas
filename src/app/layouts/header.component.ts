@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { socials } from '../config/social-media.config';
 
 @Component({
   selector: 'nas-header',
@@ -28,5 +27,32 @@ import { socials } from '../config/social-media.config';
   `
 })
 export class HeaderComponent {
-  readonly socials = socials;
+  readonly socials: SocialMedia[] = [
+    {
+      label: 'Check my Github profile',
+      icon: 'icon-github.svg',
+      link: ''
+    },
+    {
+      label: 'Check my Frontend Mentor profile',
+      icon: 'icon-frontend-mentor.svg',
+      link: ''
+    },
+    {
+      label: 'Check my LinkedIn profile',
+      icon: 'icon-linkedin.svg',
+      link: ''
+    },
+    {
+      label: 'Check my X profile',
+      icon: 'icon-twitter.svg',
+      link: ''
+    }
+  ];
+}
+
+interface SocialMedia {
+  label: string;
+  icon: string;
+  link: string;
 }

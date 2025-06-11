@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { projects } from '../config/project-config';
-import { ButtonComponent } from './button.component';
+import { ButtonComponent } from '../components/button.component';
 import { NgClass } from '@angular/common';
 
 @Component({

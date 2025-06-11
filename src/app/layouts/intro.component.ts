@@ -1,5 +1,5 @@
-import { Component, ElementRef } from '@angular/core';
-import { ButtonComponent } from './button.component';
+import { Component } from '@angular/core';
+import { ButtonComponent } from '../components/button.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
 
 @Component({
@@ -51,13 +51,13 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
           class="text-[2.5rem] tracking-[-1.14px] leading-[40px] font-semibold 
           md:text-[5.2rem] md:tracking-[-2.05px] md:leading-[5rem]
           lg:text-[5.5rem] lg:leading-[5.5rem] lg:max-w-[14ch]
-          transition-all duration-700 ease-out will-change-transform
+          transition-all duration-700 ease-out will-change-transform group-hover:text-[#4EE1A0]
          "
         >
           I turn
           <span
-            class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
-                   md:pt-6 hover:animate-pulse transition-all"
+            class="cursor-hover relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
+                   md:pt-6  transition-all hover:text-[#4EE1A0]"
           >
             ideas
           </span>
@@ -65,7 +65,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
 
           <span
             class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
-                   md:pt-6 hover:animate-pulse transition-all"
+                   md:pt-6 transition-all cursor-hover hover:text-[#4EE1A0]"
           >
             solid apps.
           </span>

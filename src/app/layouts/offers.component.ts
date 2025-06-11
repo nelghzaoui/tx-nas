@@ -3,7 +3,6 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
 import {
   LucideAngularModule,
   LucideIconData,
-  PaintbrushIcon,
   RefreshCcwIcon,
   LinkIcon,
   ShieldCheckIcon,
