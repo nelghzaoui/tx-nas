@@ -32,8 +32,8 @@ import { Component, HostListener } from '@angular/core';
       }
 
       .cursor-dot.hovered {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         background-color: #4ee1a0;
         border-color: transparent;
         mix-blend-mode: difference;

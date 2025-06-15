@@ -1,57 +1,62 @@
 import { Component } from '@angular/core';
-import { projects } from '../config/project-config';
 import { ButtonComponent } from '../components/button.component';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'nas-projects',
-  imports: [ButtonComponent, NgClass],
+  imports: [ButtonComponent],
   template: `
     <section
       class="flex flex-col text-white gap-10
-            md:gap-[3.75rem] md:pt-[4.5rem] md:pr-[1.5rem] md:pb-[2rem] md:pl-[1.5rem]
-            lg:pt-[8rem] lg:pb-[6.25rem] lg:max-w-[1062px] lg:mx-auto"
+         md:gap-[3.75rem] md:pt-[4.5rem] md:pb-[2rem]
+         lg:pt-[5rem] lg:pb-[6.25rem]"
     >
-      <div class="flex items-center justify-between">
+      <div
+        class="flex items-center justify-between max-w-[1062px] w-full mx-auto"
+      >
         <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
-          Projects
+          What I did
         </h4>
         <nas-button label="Contact me" anchor="contact" />
       </div>
 
-      <ul
-        class="flex flex-col flex-wrap gap-10 md:p-0 md:grid md:grid-cols-2 md:gap-y-[5rem] md:gap-x-[2rem]"
-      >
-        @for(project of projects; track project; let i = $index) {
-        <li class="flex flex-col gap-5">
-          <picture>
-            <source
-              [srcset]="project.images.large"
-              media="(min-width: 600px)"
-              type="image/webp"
-            />
-            <img [src]="project.images.small" alt="" class="w-full" />
-          </picture>
-          <div class="flex flex-col gap-2">
-            <h5 class="text-[1.5rem] leading-[2rem] uppercase font-semibold">
-              {{ project.name }}
-            </h5>
-            <ul class="flex items-center gap-5">
-              @for(tech of project.techs; track tech) {
-              <li class="text-[1.125rem] leading-[1.75rem] uppercase">
-                {{ tech }}
-              </li>
-              }
-            </ul>
-          </div>
+      <ul class=" divide-zinc-800">
+        @for(job of jobs; track job) {
+        <li
+          class="relative group overflow-hidden px-6 py-5 border-t border-zinc-800 md:border-none transition-transform duration-300 hover:scale-[1.03]"
+        >
           <div
-            class="flex gap-6"
-            [ngClass]="{ hover: projectHovered === i }"
-            (mouseenter)="onMouseEnter(i)"
-            (mouseleave)="onMouseLeave()"
+            class="absolute inset-0 bg-[#4EE1A0] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-105 z-0"
+          ></div>
+
+          <div
+            class="relative z-10 flex flex-col md:flex-row items-start justify-between max-w-[1062px] w-full mx-auto"
           >
-            <nas-button label="View Project" [link]="project.website" />
-            <nas-button label="View Code" [link]="project.repo" />
+            <div class="text-white text-4xl md:w-1/4">
+              {{ job.year }}
+            </div>
+            <div class="md:w-3/4 flex flex-col gap-2">
+              <div>
+                <h3 class="text-4xl font-bold text-white">
+                  {{ job.title }}
+                </h3>
+              </div>
+
+              <!-- <p class="text-zinc-400 text-md">
+                {{ job.description }}
+              </p> -->
+
+              <ul
+                class="flex flex-wrap gap-2 mt-2 text-xs font-mono text-zinc-400"
+              >
+                @for(skill of job.skills; track skill) {
+                <li
+                  class="bg-[#4EE1A0] text-white px-3 py-2 rounded group-hover:bg-black transition transform hover:scale-105 hover:brightness-110"
+                >
+                  {{ skill }}
+                </li>
+                }
+              </ul>
+            </div>
           </div>
         </li>
         }
@@ -61,7 +66,39 @@ import { NgClass } from '@angular/common';
   styles: ``
 })
 export class ProjectsComponent {
-  readonly projects = projects;
+  readonly jobs: Job[] = [
+    {
+      year: 2024,
+      title: 'Senior Angular Developer @ CESI',
+      description:
+        'Delivered a web app from scratch for CESI clients to manage occupational health, including appointments, medical forms, documents, and employee tracking.',
+      client: ' CESI',
+      skills: ['Angular', 'Standalone', 'NgRx', 'Firebase', 'Azure DevOps']
+    },
+    {
+      year: 2020,
+      title: 'Angular Developer @ Proximus',
+      description:
+        'Shipped self-service tools at Proximus to help enterprise clients manage employee mobile subscriptions, reducing reliance on support teams.',
+      client: 'Proximus',
+      skills: ['Angular', 'Akita', 'Jest', 'Cypress', 'SonarQube', 'GraphQL']
+    },
+    {
+      year: 2019,
+      title: 'Full Stack Developer @ Mainsys',
+      description:
+        'Delivered a shared mobile banking framework after migrating a legacy app, cutting development time and improving maintainability across clients like Rothschild & Nagelmackers.',
+      client: 'MainSys',
+      skills: ['Angular', 'Ionic', 'Cordova', 'Java']
+    },
+    {
+      year: 2018,
+      title: 'Full Stack Developer @ Addvals',
+      description: '',
+      client: 'Addvals',
+      skills: ['Angular', 'Ionic', 'Node.Js', 'Cordova']
+    }
+  ];
   projectHovered: number | null = null;
 
   onMouseEnter(projectHoveredIndex: number) {
@@ -72,3 +109,11 @@ export class ProjectsComponent {
     this.projectHovered = null;
   }
 }
+
+type Job = {
+  year: number;
+  title: string;
+  client: string;
+  description: string;
+  skills: string[];
+};
