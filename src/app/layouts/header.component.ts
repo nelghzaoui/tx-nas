@@ -34,19 +34,9 @@ export class HeaderComponent {
       link: ''
     },
     {
-      label: 'Check my Frontend Mentor profile',
-      icon: 'icon-frontend-mentor.svg',
-      link: ''
-    },
-    {
       label: 'Check my LinkedIn profile',
       icon: 'icon-linkedin.svg',
-      link: ''
-    },
-    {
-      label: 'Check my X profile',
-      icon: 'icon-twitter.svg',
-      link: ''
+      link: 'https://www.linkedin.com/in/nasreddine1994/'
     }
   ];
 }
