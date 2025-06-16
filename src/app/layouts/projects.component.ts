@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../components/button.component';
 
 @Component({
   selector: 'nas-projects',
-  imports: [ButtonComponent],
   template: `
     <section
-      class="flex flex-col text-white gap-10
+      class="flex flex-col text-white gap-10 pt-[3rem]
          md:gap-[3.75rem] md:pt-[4.5rem] md:pb-[2rem]
-         lg:pt-[5rem] lg:pb-[6.25rem]"
+         lg:pt-[5rem] lg:pb-[2rem]"
     >
       <div
-        class="flex items-center justify-between max-w-[1062px] w-full mx-auto"
+        class="px-6 lg:px-0 flex items-center justify-between max-w-[1062px] w-full mx-auto"
       >
         <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
           What I did
         </h4>
-        <nas-button label="Contact me" anchor="contact" />
+        <a
+          href="mailto:tx.nas@outlook.be"
+          class="text-base lg:text-xl font-medium tracking-[2.29px] leading-[1.625rem] uppercase 
+        border-b-2 border-b-[#4EE1A0] w-fit  pb-2.5 no-underline bg-transparent 
+        text-white duration-200 ease cursor-pointer md:font-bold hover:text-[#4EE1A0] hover:text-xl hover:border-b-[4px]"
+        >
+          Contact me
+        </a>
       </div>
 
       <ul class=" divide-zinc-800">
@@ -36,14 +41,16 @@ import { ButtonComponent } from '../components/button.component';
             </div>
             <div class="md:w-3/4 flex flex-col gap-2">
               <div>
-                <h3 class="text-4xl font-bold text-white">
+                <h3 class="text-4xl font-bold text-white/90">
                   {{ job.title }}
                 </h3>
               </div>
 
-              <!-- <p class="text-zinc-400 text-md">
+              <p
+                class="hidden border-l-4 border-transparent text-zinc-400 text-md transition-colors duration-300 group-hover:text-white/80 group-hover:border-white/60 group-hover:pl-4 group-hover:block"
+              >
                 {{ job.description }}
-              </p> -->
+              </p>
 
               <ul
                 class="flex flex-wrap gap-2 mt-2 text-xs font-mono text-zinc-400"
@@ -94,7 +101,8 @@ export class ProjectsComponent {
     {
       year: 2018,
       title: 'Full Stack Developer @ Addvals',
-      description: '',
+      description:
+        'Delivered a mobile and backend solution to port an existing security software to mobile. The project included store deployment and live presentation during the final defense.',
       client: 'Addvals',
       skills: ['Angular', 'Ionic', 'Node.Js', 'Cordova']
     }
