@@ -18,7 +18,7 @@ import { Component, input } from '@angular/core';
       </p>
       }
 
-      <ul class="flex gap-6 md:gap-8">
+      <ul class="flex gap-6 md:gap-12 pr-8">
         @for(social of socials; track social) {
         <li>
           <a
@@ -27,7 +27,7 @@ import { Component, input } from '@angular/core';
             [attr.aria-label]="social.label"
           >
             <img
-              class="w-10"
+              class="w-5 md:w-10"
               src="/assets/images/{{ social.icon }}"
               [alt]="social.label"
             />
@@ -46,7 +46,7 @@ export class HeaderComponent {
     {
       label: 'Check my Github profile',
       icon: 'icon-github.svg',
-      link: ''
+      link: 'https://github.com/nelghzaoui'
     },
     {
       label: 'Check my LinkedIn profile',
