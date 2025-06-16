@@ -17,7 +17,7 @@ import {
   template: `
     <section
       revealOnScroll
-      class="md:text-left md:items-start md:justify-start md:pb-[2rem] md:overflow-hidden
+      class="p-6 lg:p-0 md:text-left md:items-start md:justify-start md:pb-[2rem] pt-[5rem] md:overflow-hidden
              lg:max-w-[1062px] lg:mx-auto lg:pb-[2rem] transition-all duration-700 delay-1000 ease-out"
     >
       <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
