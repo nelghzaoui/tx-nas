@@ -4,7 +4,6 @@ import { CustomCursorComponent } from './components/cursor.component';
 import { HeaderComponent } from './layouts/header.component';
 import { IntroComponent } from './layouts/intro.component';
 import { ProjectsComponent } from './layouts/projects.component';
-import { ContactComponent } from './layouts/contact.component';
 import { OffersComponent } from './layouts/offers.component';
 
 @Component({
@@ -12,7 +11,6 @@ import { OffersComponent } from './layouts/offers.component';
   standalone: true,
   imports: [
     RouterOutlet,
-    ContactComponent,
     IntroComponent,
     HeaderComponent,
     OffersComponent,
@@ -26,7 +24,7 @@ import { OffersComponent } from './layouts/offers.component';
       <nas-header />
     </header>
 
-    <main class="p-6 pb-20">
+    <main class="pb-20">
       <nas-intro />
 
       <nas-offers />
@@ -37,16 +35,15 @@ import { OffersComponent } from './layouts/offers.component';
       <router-outlet />
     </main>
 
-    <footer class="bg-[#242424] pb-8 lg:pb-[6rem] ">
-      <nas-contact />
-      <div
+    <footer class=" pb-8 lg:pb-[2rem] ">
+      <!-- <div
         class="h-px border border-white mt-20 mx-6 mb-10
                md:w-[calc(100%-2rem)] md:mt-[27px] md:mx-auto md:mb-[1px]
                lg:max-w-[1050px] lg:mt-[6px] lg:mx-auto lg:mb-[8px]"
-      ></div>
+      ></div> -->
 
       <div class="md:px-8 md:pt-8">
-        <nas-header />
+        <nas-header [isFooter]="true" />
       </div>
     </footer>
   `
