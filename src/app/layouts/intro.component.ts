@@ -46,20 +46,24 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
       </div>
 
       <div
-        class="flex flex-col gap-6 md:max-w-[480px] md:gap-16 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start"
+        revealOnScroll
+        class="
+        flex flex-col gap-6 md:max-w-[480px] md:gap-16 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start
+        transition-all duration-700 ease-out will-change-transform group-hover:text-[#4EE1A0]"
       >
         <h1
-          revealOnScroll
-          class="text-[2.5rem] tracking-[-1.14px] leading-[40px] font-semibold 
-          md:text-[5.2rem] md:tracking-[-2.05px] md:leading-[5rem]
-          lg:text-[5.5rem] lg:leading-[5.5rem] lg:max-w-[14ch]
-          transition-all duration-700 ease-out will-change-transform group-hover:text-[#4EE1A0]
-         "
+          class="
+            text-[2.5rem] tracking-[-1.14px] leading-[40px] font-semibold 
+            md:text-[5.2rem] md:tracking-[-2.05px] md:leading-[5rem]
+            lg:text-[5.5rem] lg:leading-[5.5rem] lg:max-w-[14ch]
+          "
         >
           I turn
           <span
-            class="cursor-hover relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
-                   md:pt-6  transition-all hover:text-[#4EE1A0]"
+            class="
+              cursor-hover relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
+              md:pt-6 transition-all hover:text-[#4EE1A0]
+              "
           >
             ideas
           </span>
@@ -73,18 +77,13 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
           </span>
         </h1>
 
-        <p
-          revealOnScroll
-          class="text-zinc-400 mt-2 text-sm uppercase tracking-wide transition-all duration-700 delay-100 ease-out"
-        >
+        <p class="text-zinc-400 mt-2 text-sm uppercase tracking-wide">
           Angular Developer | Available for Remote/Hybrid Freelance Projects |
           6+ YOE
         </p>
 
         <p
-          revealOnScroll
-          class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]
-                 transition-all duration-700 delay-100 ease-out"
+          class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]"
         >
           I help teams build web applications that are fast, reliable, and easy
           to maintain. With over 6 years of experience in Angular, I handle
@@ -92,10 +91,9 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         </p>
 
         <nas-button
-          revealOnScroll
           label="Let’s work together"
           anchor="contact"
-          class="md:translate-y-[-10px] transition-all duration-700 delay-1000 ease-out"
+          class="md:translate-y-[-10px]"
         />
       </div>
     </section>

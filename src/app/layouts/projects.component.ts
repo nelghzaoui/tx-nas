@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'nas-projects',
+  imports: [RevealOnScrollDirective],
   template: `
     <section
+      revealOnScroll
       class="flex flex-col text-white gap-10 pt-[3rem]
          md:gap-[3.75rem] md:pt-[4.5rem] md:pb-[2rem]
-         lg:pt-[5rem]"
+         lg:pt-[5rem] transition-all duration-700 delay-500 ease-out"
     >
       <div
         class="px-6 lg:px-0 flex items-center justify-between max-w-[1062px] w-full mx-auto"
