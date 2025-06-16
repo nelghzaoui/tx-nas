@@ -1,41 +1,47 @@
 import {
   Directive,
-  ElementRef,
-  HostBinding,
-  AfterViewInit,
-  Inject,
   inject,
-  Renderer2
+  effect,
+  signal,
+  Injector,
+  ElementRef,
+  PLATFORM_ID,
+  runInInjectionContext
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[revealOnScroll]',
   standalone: true
 })
-export class RevealOnScrollDirective implements AfterViewInit {
-  private readonly el = inject(ElementRef);
+export class RevealOnScrollDirective {
+  private visible = signal(false);
 
-  @HostBinding('class.opacity-0') hidden = true;
-  @HostBinding('class.translate-y-4') offset = true;
-  @HostBinding('class.opacity-100') show = false;
-  @HostBinding('class.translate-y-0') noOffset = false;
+  constructor() {
+    const injector = inject(Injector);
+    const el = inject(ElementRef<HTMLElement>).nativeElement;
+    const platformId = inject(PLATFORM_ID);
 
-  ngAfterViewInit() {
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
+    if (isPlatformBrowser(platformId) && 'IntersectionObserver' in window) {
+      new IntersectionObserver(
+        ([entry], observer) => {
           if (entry.isIntersecting) {
-            this.hidden = false;
-            this.offset = false;
-            this.show = true;
-            this.noOffset = true;
+            this.visible.set(true);
             observer.disconnect();
           }
         },
         { threshold: 0.3 }
-      );
-
-      observer.observe(this.el.nativeElement);
+      ).observe(el);
     }
+
+    runInInjectionContext(injector, () =>
+      effect(() => {
+        const isVisible = this.visible();
+        el.classList.toggle('opacity-0', !isVisible);
+        el.classList.toggle('translate-y-4', !isVisible);
+        el.classList.toggle('opacity-100', isVisible);
+        el.classList.toggle('translate-y-0', isVisible);
+      })
+    );
   }
 }
