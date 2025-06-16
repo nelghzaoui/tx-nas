@@ -24,9 +24,7 @@ import { OffersComponent } from './layouts/offers.component';
 
     <main class="pb-20 md:pb-5">
       <nas-intro />
-
       <nas-offers />
-
       <nas-projects />
     </main>
 
