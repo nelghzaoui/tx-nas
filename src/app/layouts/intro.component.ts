@@ -17,20 +17,22 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="/assets/images/image-profile-desktop.webp"
+            srcset="/assets/images/profile-desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            srcset="/assets/images/image-profile-tablet.webp"
+            srcset="/assets/images/profile-tablet.webp"
             type="image/webp"
           />
           <img
-            src="/assets/images/image-profile-mobile.webp"
+            src="/assets/images/profile-mobile.webp"
             alt=""
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
-                   lg:absolute lg:max-w-[400px] lg:top-0 lg:right-0 min-[1070px]:left-[60%] min-[1070px]:right-auto min-[1450px]:left-[58%]"
+                   lg:absolute lg:max-w-[400px] lg:top-0 lg:right-0 min-[1070px]:left-[60%] min-[1070px]:right-auto min-[1450px]:left-[58%]
+                   px-[2px] pb-[2px] md: rounded-bl-lg lg:rounded-b-lg  md:bg-gradient-to-b from-[#4EE1A0] to-[#E5E5E5]
+                   "
           />
         </picture>
         <picture>
@@ -44,7 +46,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
       </div>
 
       <div
-        class="flex flex-col gap-6 md:max-w-[510px] md:gap-16 lg:gap-[2.688rem] lg:max-w-full"
+        class="flex flex-col gap-6 md:max-w-[480px] md:gap-16 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start"
       >
         <h1
           revealOnScroll
