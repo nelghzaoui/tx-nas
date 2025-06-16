@@ -17,16 +17,16 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="/assets/images/profile-desktop.webp"
+            srcset="assets/images/profile-desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            srcset="/assets/images/profile-tablet.webp"
+            srcset="assets/images/profile-tablet.webp"
             type="image/webp"
           />
           <img
-            src="/assets/images/profile-mobile.webp"
+            src="assets/images/profile-mobile.webp"
             alt=""
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
@@ -38,7 +38,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="/assets/images/pattern-circle.svg"
+            srcset="assets/images/pattern-circle.svg"
             type="image/webp"
             class=""
           />
