@@ -17,7 +17,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="{{getAssetUrl('profile-desktop.webp')}}"
+            srcset="{{getAssetUrl()}}"
             type="image/webp"
           />
           <source
@@ -100,7 +100,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
   `
 })
 export class IntroComponent {
-  getAssetUrl(imagePath: string) {
-    return new URL(`/assets/images/${imagePath}`, import.meta.url).href;
+  getAssetUrl() {
+    return new URL(`/assets/images/profile-desktop.webp`, import.meta.url).href;
   }
 }
