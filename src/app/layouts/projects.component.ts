@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
+import { ContactButtonComponent } from '../components/contact.component';
 
 @Component({
   selector: 'nas-projects',
-  imports: [RevealOnScrollDirective],
+  imports: [ContactButtonComponent, RevealOnScrollDirective],
   template: `
     <section
       revealOnScroll
       class="flex flex-col text-white gap-10 pt-[3rem]
          md:gap-[3.75rem] md:pt-[4.5rem] md:pb-[2rem]
-         lg:pt-[5rem] transition-all duration-700 delay-500 ease-out"
+         lg:pt-[5rem] transition-all duration-700 delay-300 ease-out"
     >
       <div
         class="px-6 lg:px-0 flex items-center justify-between max-w-[1062px] w-full mx-auto"
@@ -17,14 +18,8 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
           What I did
         </h4>
-        <a
-          href="mailto:tx.nas@outlook.be"
-          class="text-base lg:text-xl font-medium tracking-[2.29px] leading-[1.625rem] uppercase 
-        border-b-2 border-b-[#4EE1A0] w-fit  pb-2.5 no-underline bg-transparent 
-        text-white duration-200 ease cursor-pointer md:font-bold hover:text-[#4EE1A0] hover:text-xl hover:border-b-[4px]"
-        >
-          Contact me
-        </a>
+
+        <nas-contact label="Contact me" />
       </div>
 
       <ul class=" divide-zinc-800">
@@ -110,15 +105,6 @@ export class ProjectsComponent {
       skills: ['Angular', 'Ionic', 'Node.Js', 'Cordova']
     }
   ];
-  projectHovered: number | null = null;
-
-  onMouseEnter(projectHoveredIndex: number) {
-    this.projectHovered = projectHoveredIndex;
-  }
-
-  onMouseLeave() {
-    this.projectHovered = null;
-  }
 }
 
 type Job = {

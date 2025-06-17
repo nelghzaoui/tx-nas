@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../components/button.component';
+import { ContactButtonComponent } from '../components/contact.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
 
 @Component({
   selector: 'nas-intro',
-  imports: [ButtonComponent, RevealOnScrollDirective],
+  imports: [ContactButtonComponent, RevealOnScrollDirective],
   template: `
     <section
       class="flex flex-col items-center text-center color-white
@@ -48,7 +48,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
       <div
         revealOnScroll
         class="
-        flex flex-col gap-6 md:max-w-[480px] md:gap-16 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start
+        flex flex-col gap-6 md:max-w-[480px] md:gap-12 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start
         transition-all duration-700 ease-out will-change-transform group-hover:text-[#4EE1A0]"
       >
         <h1
@@ -90,7 +90,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
           everything from UI implementation to full project architecture.
         </p>
 
-        <nas-button
+        <nas-contact
           label="Let’s work together"
           anchor="contact"
           class="md:translate-y-[-10px]"
