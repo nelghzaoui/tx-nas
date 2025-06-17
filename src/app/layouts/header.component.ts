@@ -28,7 +28,7 @@ import { Component, input } from '@angular/core';
           >
             <img
               class="w-5 md:w-10"
-              src="/assets/images/{{ social.icon }}"
+              src="assets/images/{{ social.icon }}"
               [alt]="social.label"
             />
           </a>
