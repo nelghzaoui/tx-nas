@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ContactButtonComponent } from '../components/contact.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
+import { AssetUrlPipe } from '../pipes/asset-url.pipe';
 
 @Component({
   selector: 'nas-intro',
-  imports: [ContactButtonComponent, RevealOnScrollDirective],
+  imports: [AssetUrlPipe, ContactButtonComponent, RevealOnScrollDirective],
   template: `
     <section
       class="flex flex-col items-center text-center color-white
@@ -17,16 +18,16 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="{{getAssetUrl()}}"
+            [srcset]="'profile-desktop.webp' | assetUrl"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            srcset="assets/images/profile-tablet.webp"
+            [srcset]="'profile-tablet.webp' | assetUrl"
             type="image/webp"
           />
           <img
-            src="assets/images/profile-mobile.webp"
+            [src]="'profile-mobile.webp' | assetUrl"
             alt=""
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
@@ -38,7 +39,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            srcset="assets/images/pattern-circle.svg"
+            [srcset]="'pattern-circle.svg' | assetUrl"
             type="image/webp"
             class=""
           />
@@ -99,8 +100,4 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
     </section>
   `
 })
-export class IntroComponent {
-  getAssetUrl() {
-    return new URL(`/assets/images/profile-desktop.webp`, import.meta.url).href;
-  }
-}
+export class IntroComponent {}

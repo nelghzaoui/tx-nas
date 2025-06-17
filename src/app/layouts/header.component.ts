@@ -1,7 +1,9 @@
 import { Component, input } from '@angular/core';
+import { AssetUrlPipe } from '../pipes/asset-url.pipe';
 
 @Component({
   selector: 'nas-header',
+  imports: [AssetUrlPipe],
   template: `
     <nav
       class="flex flex-col items-center gap-6 
@@ -28,7 +30,7 @@ import { Component, input } from '@angular/core';
           >
             <img
               class="w-5 md:w-10"
-              src="assets/images/{{ social.icon }}"
+              [src]="social.icon | assetUrl"
               [alt]="social.label"
             />
           </a>

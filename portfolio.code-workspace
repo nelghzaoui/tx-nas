@@ -9,7 +9,6 @@
     "files.autoSave": "off",
     "peacock.color": "#42b883",
     "prettier.jsxSingleQuote": true,
-    "vsicons.projectDetection.autoReload": true,
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
       "activityBar.background": "#65c89b",
@@ -32,6 +31,6 @@
       "statusBarItem.remoteForeground": "#15202b"
     },
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "material-icon-theme"
   }
 }
