@@ -32,6 +32,6 @@ jobs:
         run: touch dist/analog/public/.nojekyll
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist/analog/public -b gh-pages
+        run: pnpm gh-pages -d dist/analog/public -b gh-pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
