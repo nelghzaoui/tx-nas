@@ -12,8 +12,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && npx gh-pages -d dist/analog/public -b gh-pages",
-    "postbuild": "touch dist/analog/public/.nojekyll"
+    "deploy": "npm run build && touch dist/analog/public/.nojekyll && npx gh-pages -d dist/analog/public"
   },
   "private": true,
   "dependencies": {
