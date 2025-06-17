@@ -9,11 +9,10 @@
     "ng": "ng",
     "dev": "ng serve",
     "start": "npm run dev",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && npx gh-pages -d dist/analog/public",
-    "postbuild": "touch dist/analog/public/.nojekyll"
+    "deploy": "npm run build && touch dist/analog/public/.nojekyll && npx gh-pages -d dist/analog/public -b gh-pages"
   },
   "private": true,
   "dependencies": {
