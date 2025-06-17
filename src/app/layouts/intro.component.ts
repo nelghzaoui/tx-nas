@@ -101,6 +101,6 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
 })
 export class IntroComponent {
   getAssetUrl(imagePath: string) {
-    return new URL(`assets/images/${imagePath}`, import.meta.url).href;
+    return new URL(`/assets/images/${imagePath}`, import.meta.url).href;
   }
 }
