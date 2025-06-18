@@ -40,9 +40,7 @@ export class HeaderComponent {
   readonly socials: SocialMedia[] = [
     {
       label: 'Check my Github profile',
-      icon: isDevMode()
-        ? '/assets/images/icon-github.svg'
-        : new URL('/assets/images/icon-github.svg', import.meta.url).href,
+      icon: '/assets/images/icon-github.svg',
       link: 'https://github.com/nelghzaoui'
     },
     {
