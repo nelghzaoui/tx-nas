@@ -40,7 +40,7 @@ import { ContactButtonComponent } from '../components/contact.component';
             <div class="md:w-3/4 flex flex-col gap-2">
               <div>
                 <h3
-                  class="text-4xl font-bold text-white/90 hover:text-zinc-800"
+                  class="text-4xl font-bold text-white/90 group-hover:text-zinc-800"
                 >
                   {{ job.title }}
                 </h3>
@@ -99,8 +99,8 @@ export class ProjectsComponent {
       skills: ['Angular', 'Ionic', 'Cordova', 'Java']
     },
     {
-      year: 2018,
-      title: 'Full Stack Developer @ Addvals',
+      year: 2017,
+      title: 'Intern @ Addvals',
       description:
         'Delivered a mobile and backend solution to port an existing security software to mobile. The project included store deployment and live presentation during the final defense.',
       client: 'Addvals',
