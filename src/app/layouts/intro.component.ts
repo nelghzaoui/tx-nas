@@ -1,7 +1,6 @@
-import { Component, isDevMode } from '@angular/core';
+import { Component } from '@angular/core';
 import { ContactButtonComponent } from '../components/contact.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
-import { assetMap, fullPath } from '../../tools/assets.tools';
 
 @Component({
   selector: 'nas-intro',
@@ -101,12 +100,19 @@ import { assetMap, fullPath } from '../../tools/assets.tools';
   `
 })
 export class IntroComponent {
-  mobile: string = this.asset('profile-mobile.webp');
-  tablet: string = this.asset('profile-tablet.webp');
-  desktop: string = this.asset('profile-desktop.webp');
-  circle: string = this.asset('pattern-circle.svg');
+  get mobile(): string {
+    return new URL('/assets/images/profile-mobile.webp', import.meta.url).href;
+  }
 
-  asset(path: string): string {
-    return new URL(`/assets/images/${path}`, import.meta.url).href;
+  get tablet(): string {
+    return new URL('/assets/images/profile-tablet.webp', import.meta.url).href;
+  }
+
+  get desktop(): string {
+    return new URL('/assets/images/profile-desktop.webp', import.meta.url).href;
+  }
+
+  get circle(): string {
+    return new URL('/assets/images/pattern-circle.svg', import.meta.url).href;
   }
 }
