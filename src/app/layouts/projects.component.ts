@@ -19,7 +19,18 @@ import { ContactButtonComponent } from '../components/contact.component';
           What I did
         </h3>
 
-        <nas-contact label="Contact me" />
+        <!-- <nas-contact label="Contact me" /> -->
+        <a
+          href="/assets/pdf/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            text-xl md:text-2xl font-medium tracking-[2.29px] leading-[1.625rem] uppercase 
+            border-b-2 border-b-primary w-fit pb-2.5 no-underline bg-transparent cursor-hover
+          text-white duration-200 ease cursor-pointer md:font-bold hover:text-primary hover:text-2xl hover:border-b-[4px]"
+        >
+          View my resume
+        </a>
       </div>
 
       <ul class=" divide-zinc-800">
