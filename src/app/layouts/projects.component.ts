@@ -28,7 +28,7 @@ import { ContactButtonComponent } from '../components/contact.component';
           class="relative group overflow-hidden px-6 py-5 border-t border-zinc-800 md:border-none transition-transform duration-300 hover:scale-[1.03]"
         >
           <div
-            class="absolute inset-0 bg-[#4EE1A0] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-105 z-0"
+            class="absolute inset-0 bg-primary scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-105 z-0"
           ></div>
 
           <div
@@ -55,7 +55,7 @@ import { ContactButtonComponent } from '../components/contact.component';
               >
                 @for(skill of job.skills; track skill) {
                 <li
-                  class="bg-[#4EE1A0] text-white px-3 py-2 rounded group-hover:bg-black transition transform hover:scale-105 hover:brightness-110"
+                  class="bg-primary text-white px-3 py-2 rounded group-hover:bg-black transition transform hover:scale-105 hover:brightness-110"
                 >
                   {{ skill }}
                 </li>

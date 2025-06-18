@@ -33,10 +33,10 @@ import {
          hover:-translate-y-1 group cursor-pointer hover:scale-[1.05] hover:bg-gradient-to-br hover:from-zinc-900 hover:to-[#132e26]"
         >
           <span
-            class="absolute left-0 top-0 h-full w-[4px] bg-[#4EE1A0] rounded-l scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"
+            class="absolute left-0 top-0 h-full w-[4px] bg-primary rounded-l scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300"
           ></span>
 
-          <div class="flex flex-col items-center gap-4 mb-2 text-[#4EE1A0]">
+          <div class="flex flex-col items-center gap-4 mb-2 text-primary">
             <!-- Icône "code" -->
             <i-lucide
               [img]="offer.icon"

@@ -13,7 +13,7 @@ import { Component, input } from '@angular/core';
       @if(isFooter()) {
       <p class="text-center md:text-left flex items-center gap-2">
         Built with
-        <span class="text-[#4EE1A0] animate-pulse">❤️</span>
+        <span class="text-primary animate-pulse">❤️</span>
         by <span class="font-semibold">Nasreddine</span>
       </p>
       }

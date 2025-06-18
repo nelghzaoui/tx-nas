@@ -59,9 +59,7 @@ export class CustomCursorComponent {
     const target = event.target as HTMLElement;
 
     this.isHovering = !!(
-      target.closest('a') ||
-      target.closest('button') ||
-      target.classList.contains('cursor-hover')
+      target.closest('button') || target.classList.contains('cursor-hover')
     );
   }
 

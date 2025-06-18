@@ -31,7 +31,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
                    lg:absolute lg:max-w-[400px] lg:top-0 lg:right-0 min-[1070px]:left-[60%] min-[1070px]:right-auto min-[1450px]:left-[58%]
-                   px-[2px] pb-[2px] md:rounded-bl-lg lg:rounded-b-lg  md:bg-gradient-to-b from-[#4EE1A0] to-[#E5E5E5]
+                   px-[2px] pb-[2px] md:rounded-bl-lg lg:rounded-b-lg  md:bg-gradient-to-b from-primary to-[#E5E5E5]
                    "
           />
         </picture>
@@ -41,7 +41,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         revealOnScroll
         class="
         flex flex-col gap-6 md:max-w-[480px] md:gap-12 lg:gap-[2.688rem] lg:max-w-full md:text-center lg:text-start
-        transition-all duration-700 ease-out will-change-transform group-hover:text-[#4EE1A0]"
+        transition-all duration-700 ease-out will-change-transform group-hover:text-primary"
       >
         <h1
           class="
@@ -53,8 +53,8 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
           I turn
           <span
             class="
-              cursor-hover relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
-              md:pt-6 transition-all hover:text-[#4EE1A0]
+              cursor-hover relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-primary inline-block
+              md:pt-6 transition-all hover:text-primary
               "
           >
             ideas
@@ -62,8 +62,8 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
           into
 
           <span
-            class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-[#4EE1A0] inline-block
-                   md:pt-6 transition-all cursor-hover hover:text-[#4EE1A0]"
+            class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:w-full after:bg-primary inline-block
+                   md:pt-6 transition-all cursor-hover hover:text-primary"
           >
             solid apps.
           </span>
