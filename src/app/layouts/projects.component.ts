@@ -34,18 +34,20 @@ import { ContactButtonComponent } from '../components/contact.component';
           <div
             class="relative z-10 flex flex-col md:flex-row items-start justify-between max-w-[1062px] w-full mx-auto"
           >
-            <div class="text-white text-4xl md:w-1/4">
+            <div class="text-white hover:text-zinc-800 text-4xl md:w-1/4">
               {{ job.year }}
             </div>
             <div class="md:w-3/4 flex flex-col gap-2">
               <div>
-                <h3 class="text-4xl font-bold text-white/90">
+                <h3
+                  class="text-4xl font-bold text-white/90 hover:text-zinc-800"
+                >
                   {{ job.title }}
                 </h3>
               </div>
 
               <p
-                class="hidden border-l-4 border-transparent text-zinc-400 text-md transition-colors duration-300 group-hover:text-white/80 group-hover:border-white/60 group-hover:pl-4 group-hover:block"
+                class="hidden border-l-4 border-transparent text-zinc-800 text-md transition-colors duration-300 group-hover:text-white/80 group-hover:border-white/60 group-hover:pl-4 group-hover:block"
               >
                 {{ job.description }}
               </p>
