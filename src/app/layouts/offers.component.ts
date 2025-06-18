@@ -18,7 +18,7 @@ import {
     <section
       revealOnScroll
       class="p-6 lg:p-0 md:text-left md:items-start md:justify-start md:pb-[2rem] pt-[5rem] md:overflow-hidden
-             lg:max-w-[1062px] lg:mx-auto lg:pb-[2rem] transition-all duration-700 delay-300 ease-out"
+             lg:max-w-[1062px] lg:mx-auto lg:pb-[2rem] transition-all duration-700 delay-200 ease-out"
     >
       <h2 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
         What I offer
