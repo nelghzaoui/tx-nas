@@ -1,8 +1,16 @@
+function asset(path: string): string {
+  return new URL(`/assets/images/${path}`, import.meta.url).href;
+}
+
+export const fullPath = (name: string): string => {
+  return `/assets/images/${name}`;
+};
+
 export const assetMap: Record<string, string> = {
-  desktop: new URL('/assets/images/profile-desktop.webp', import.meta.url).href,
-  tablet: new URL('/assets/images/profile-tablet.webp', import.meta.url).href,
-  mobile: new URL('/assets/images/profile-mobile.webp', import.meta.url).href,
-  circle: new URL('/assets/images/pattern-circle.svg', import.meta.url).href,
-  github: new URL('/assets/images/icon-github.svg', import.meta.url).href,
-  linkedin: new URL('/assets/images/icon-linkedin.svg', import.meta.url).href
+  desktop: asset('profile-desktop.webp'),
+  tablet: asset('profile-tablet.webp'),
+  mobile: asset('profile-mobile.webp'),
+  circle: asset('pattern-circle.svg'),
+  github: asset('icon-github.svg'),
+  linkedin: asset('icon-linkedin.svg')
 };

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, isDevMode } from '@angular/core';
 import { assetMap } from '../../tools/assets.tools';
 
 @Component({
@@ -41,12 +41,16 @@ export class HeaderComponent {
   readonly socials: SocialMedia[] = [
     {
       label: 'Check my Github profile',
-      icon: assetMap['github'],
+      icon: isDevMode()
+        ? '/assets/images/icon-github.svg'
+        : new URL('/assets/images/icon-github.svg', import.meta.url).href,
       link: 'https://github.com/nelghzaoui'
     },
     {
       label: 'Check my LinkedIn profile',
-      icon: assetMap['linkedin'],
+      icon: isDevMode()
+        ? '/assets/images/icon-linkedin.svg'
+        : new URL('/assets/images/icon-linkedin.svg', import.meta.url).href,
       link: 'https://www.linkedin.com/in/nasreddine1994/'
     }
   ];

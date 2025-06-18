@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { ContactButtonComponent } from '../components/contact.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
-import { assetMap } from '../../tools/assets.tools';
+import { assetMap, fullPath } from '../../tools/assets.tools';
 
 @Component({
   selector: 'nas-intro',
@@ -101,10 +101,12 @@ import { assetMap } from '../../tools/assets.tools';
   `
 })
 export class IntroComponent {
+  dev = isDevMode();
+
   images = {
-    mobile: assetMap['mobile'],
-    tablet: assetMap['tablet'],
-    desktop: assetMap['desktop'],
-    circle: assetMap['circle']
+    mobile: this.dev ? fullPath('profile-mobile.webp') : assetMap['mobile'],
+    tablet: this.dev ? fullPath('profile-tablet.webp') : assetMap['tablet'],
+    desktop: this.dev ? fullPath('profile-desktop.webp') : assetMap['desktop'],
+    circle: this.dev ? fullPath('profile-circle.webp') : assetMap['circle']
   };
 }
