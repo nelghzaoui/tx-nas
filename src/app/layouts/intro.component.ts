@@ -75,7 +75,7 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         </p>
 
         <p
-          class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]"
+          class="text-onSurface md:text-onSurface md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]"
         >
           I help teams build <strong>scalable</strong> Angular applications that
           are fast, reliable and easy to maintain. With over 6 years of
