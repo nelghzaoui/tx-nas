@@ -17,30 +17,22 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <picture>
           <source
             media="(min-width: 992px)"
-            [srcset]="desktop"
+            srcset="/assets/images/profile-desktop.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            [srcset]="tablet"
+            srcset="/assets/images/profile-tablet.webp"
             type="image/webp"
           />
           <img
-            [src]="mobile"
-            alt=""
+            src="/assets/images/profile-mobile.webp"
+            alt="Picture of Nasreddine, angular developer"
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
                    lg:absolute lg:max-w-[400px] lg:top-0 lg:right-0 min-[1070px]:left-[60%] min-[1070px]:right-auto min-[1450px]:left-[58%]
                    px-[2px] pb-[2px] md:rounded-bl-lg lg:rounded-b-lg  md:bg-gradient-to-b from-[#4EE1A0] to-[#E5E5E5]
                    "
-          />
-        </picture>
-        <picture>
-          <source
-            media="(min-width: 992px)"
-            [srcset]="circle"
-            type="image/webp"
-            class=""
           />
         </picture>
       </div>
@@ -85,9 +77,10 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
         <p
           class="text-[#D9D9D9] md:text-[#D9D9D9] md:text-xl md:max-w-[460px] md:leading-[1.75rem] lg:w-[40ch]"
         >
-          I help teams build web applications that are fast, reliable, and easy
-          to maintain. With over 6 years of experience in Angular, I handle
-          everything from UI implementation to full project architecture.
+          I help teams build <strong>scalable</strong> Angular applications that
+          are fast, reliable and easy to maintain. With over 6 years of
+          experience in Angular, I handle everything from UI implementation to
+          full project architecture.
         </p>
 
         <nas-contact
@@ -99,20 +92,4 @@ import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directiv
     </section>
   `
 })
-export class IntroComponent {
-  get mobile(): string {
-    return new URL('/assets/images/profile-mobile.webp', import.meta.url).href;
-  }
-
-  get tablet(): string {
-    return new URL('/assets/images/profile-tablet.webp', import.meta.url).href;
-  }
-
-  get desktop(): string {
-    return new URL('/assets/images/profile-desktop.webp', import.meta.url).href;
-  }
-
-  get circle(): string {
-    return new URL('/assets/images/pattern-circle.svg', import.meta.url).href;
-  }
-}
+export class IntroComponent {}

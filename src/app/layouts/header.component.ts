@@ -1,4 +1,4 @@
-import { Component, input, isDevMode } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'nas-header',
@@ -26,7 +26,11 @@ import { Component, input, isDevMode } from '@angular/core';
             target="_blank"
             [attr.aria-label]="social.label"
           >
-            <img class="w-5 md:w-10" [src]="social.icon" [alt]="social.label" />
+            <img
+              class="w-5 md:w-10"
+              src="/assets/images/{{ social.icon }}"
+              [alt]="social.label"
+            />
           </a>
         </li>
         }
@@ -40,14 +44,12 @@ export class HeaderComponent {
   readonly socials: SocialMedia[] = [
     {
       label: 'Check my Github profile',
-      icon: '/assets/images/icon-github.svg',
+      icon: 'icon-github.svg',
       link: 'https://github.com/nelghzaoui'
     },
     {
       label: 'Check my LinkedIn profile',
-      icon: isDevMode()
-        ? '/assets/images/icon-linkedin.svg'
-        : new URL('/assets/images/icon-linkedin.svg', import.meta.url).href,
+      icon: 'icon-linkedin.svg',
       link: 'https://www.linkedin.com/in/nasreddine1994/'
     }
   ];
