@@ -18,16 +18,16 @@ import { assetMap, fullPath } from '../../tools/assets.tools';
         <picture>
           <source
             media="(min-width: 992px)"
-            [srcset]="images.desktop"
+            [srcset]="desktop"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            [srcset]="images.tablet"
+            [srcset]="tablet"
             type="image/webp"
           />
           <img
-            [src]="images.mobile"
+            [src]="mobile"
             alt=""
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
@@ -39,7 +39,7 @@ import { assetMap, fullPath } from '../../tools/assets.tools';
         <picture>
           <source
             media="(min-width: 992px)"
-            [srcset]="images.circle"
+            [srcset]="circle"
             type="image/webp"
             class=""
           />
@@ -101,12 +101,12 @@ import { assetMap, fullPath } from '../../tools/assets.tools';
   `
 })
 export class IntroComponent {
-  dev = isDevMode();
+  mobile: string = this.asset('profile-mobile.webp');
+  tablet: string = this.asset('profile-tablet.webp');
+  desktop: string = this.asset('profile-desktop.webp');
+  circle: string = this.asset('pattern-circle.svg');
 
-  images = {
-    mobile: this.dev ? fullPath('profile-mobile.webp') : assetMap['mobile'],
-    tablet: this.dev ? fullPath('profile-tablet.webp') : assetMap['tablet'],
-    desktop: this.dev ? fullPath('profile-desktop.webp') : assetMap['desktop'],
-    circle: this.dev ? fullPath('profile-circle.webp') : assetMap['circle']
-  };
+  asset(path: string): string {
+    return new URL(`/assets/images/${path}`, import.meta.url).href;
+  }
 }
