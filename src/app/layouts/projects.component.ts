@@ -15,9 +15,9 @@ import { ContactButtonComponent } from '../components/contact.component';
       <div
         class="px-6 lg:px-0 flex items-center justify-between max-w-[1062px] w-full mx-auto"
       >
-        <h4 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
+        <h3 class="text-4xl font-bold leading-[2.5rem] md:text-7xl lg:text-7xl">
           What I did
-        </h4>
+        </h3>
 
         <nas-contact label="Contact me" />
       </div>
