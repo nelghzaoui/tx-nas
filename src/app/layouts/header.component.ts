@@ -1,5 +1,4 @@
 import { Component, input, isDevMode } from '@angular/core';
-import { assetMap } from '../../tools/assets.tools';
 
 @Component({
   selector: 'nas-header',
