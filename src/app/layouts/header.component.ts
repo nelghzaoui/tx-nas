@@ -1,9 +1,8 @@
 import { Component, input } from '@angular/core';
-import { AssetUrlPipe } from '../pipes/asset-url.pipe';
+import { assetMap } from '../../tools/assets.tools';
 
 @Component({
   selector: 'nas-header',
-  imports: [AssetUrlPipe],
   template: `
     <nav
       class="flex flex-col items-center gap-6 
@@ -28,11 +27,7 @@ import { AssetUrlPipe } from '../pipes/asset-url.pipe';
             target="_blank"
             [attr.aria-label]="social.label"
           >
-            <img
-              class="w-5 md:w-10"
-              [src]="social.icon | assetUrl"
-              [alt]="social.label"
-            />
+            <img class="w-5 md:w-10" [src]="social.icon" [alt]="social.label" />
           </a>
         </li>
         }
@@ -46,12 +41,12 @@ export class HeaderComponent {
   readonly socials: SocialMedia[] = [
     {
       label: 'Check my Github profile',
-      icon: 'icon-github.svg',
+      icon: assetMap['github'],
       link: 'https://github.com/nelghzaoui'
     },
     {
       label: 'Check my LinkedIn profile',
-      icon: 'icon-linkedin.svg',
+      icon: assetMap['linkedin'],
       link: 'https://www.linkedin.com/in/nasreddine1994/'
     }
   ];

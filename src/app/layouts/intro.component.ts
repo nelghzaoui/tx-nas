@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ContactButtonComponent } from '../components/contact.component';
 import { RevealOnScrollDirective } from '../directives/reveal-on-scroll.directive';
-import { AssetUrlPipe } from '../pipes/asset-url.pipe';
+import { assetMap } from '../../tools/assets.tools';
 
 @Component({
   selector: 'nas-intro',
-  imports: [AssetUrlPipe, ContactButtonComponent, RevealOnScrollDirective],
+  imports: [ContactButtonComponent, RevealOnScrollDirective],
   template: `
     <section
       class="flex flex-col items-center text-center color-white
@@ -18,16 +18,16 @@ import { AssetUrlPipe } from '../pipes/asset-url.pipe';
         <picture>
           <source
             media="(min-width: 992px)"
-            [srcset]="'profile-desktop.webp' | assetUrl"
+            [srcset]="images.desktop"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            [srcset]="'profile-tablet.webp' | assetUrl"
+            [srcset]="images.tablet"
             type="image/webp"
           />
           <img
-            [src]="'profile-mobile.webp' | assetUrl"
+            [src]="images.mobile"
             alt=""
             class="max-w-[174px] relative top-[-10rem] mb-[-120px] z-[-1] 
                    md:max-w-[322px] md:absolute md:top-0 md:right-0
@@ -39,7 +39,7 @@ import { AssetUrlPipe } from '../pipes/asset-url.pipe';
         <picture>
           <source
             media="(min-width: 992px)"
-            [srcset]="'pattern-circle.svg' | assetUrl"
+            [srcset]="images.circle"
             type="image/webp"
             class=""
           />
@@ -100,4 +100,11 @@ import { AssetUrlPipe } from '../pipes/asset-url.pipe';
     </section>
   `
 })
-export class IntroComponent {}
+export class IntroComponent {
+  images = {
+    mobile: assetMap['mobile'],
+    tablet: assetMap['tablet'],
+    desktop: assetMap['desktop'],
+    circle: assetMap['circle']
+  };
+}
