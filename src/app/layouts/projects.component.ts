@@ -19,7 +19,6 @@ import { ContactButtonComponent } from '../components/contact.component';
           What I did
         </h3>
 
-        <!-- <nas-contact label="Contact me" /> -->
         <a
           href="/assets/pdf/resume.pdf"
           target="_blank"
