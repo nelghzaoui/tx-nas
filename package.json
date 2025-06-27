@@ -8,11 +8,11 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "npm run dev",
+    "start": "pnpm run dev",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && touch dist/analog/public/.nojekyll && npx gh-pages -d dist/analog/public"
+    "deploy": "pnpm run build && touch dist/analog/public/.nojekyll && npx gh-pages -d dist/analog/public"
   },
   "private": true,
   "dependencies": {
